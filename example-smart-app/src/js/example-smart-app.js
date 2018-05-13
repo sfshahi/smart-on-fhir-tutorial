@@ -43,7 +43,7 @@
           }
 
           var height = byCodes('8302-2');
-          var weight = byCodes('29463-7');
+          var weight = byCodes('3141-9');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
@@ -89,7 +89,7 @@
       birthdate: {value: ''},
       age: {value: ''},
       height: {value: ''},
-      weight: {value: '-1'},
+      weight: {value: '1'},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
       ldl: {value: ''},
