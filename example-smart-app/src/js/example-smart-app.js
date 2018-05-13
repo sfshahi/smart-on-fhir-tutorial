@@ -172,6 +172,10 @@
     $('#weight').html(p.weight);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
+    $('#vitalspanel').html(p.vitalspanel);
+    $('#heartrate').html(p.heartrate);
+    $('#resprate').html(p.resprate);
+    $('#pulseox').html(p.pulseox);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
   };
