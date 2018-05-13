@@ -18,7 +18,9 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-                              'http://loinc.org|3141-9',]
+                              'http://loinc.org|3141-9', 'http://loinc.org|85353-1',
+                              'http://loinc.org|9279-1', 'http://loinc.org|59408-5',
+                              'http://loinc.org|8867-4',]
                       }
                     }
                   });
@@ -46,6 +48,10 @@
           var weight = byCodes('3141-9');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
+          var vitalspanel = byCodes('85353-1');
+          var heartrate = byCodes('8867-4');
+          var resprate = byCodes('9279-1');
+          var pulseox = byCodes('59408-5');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
@@ -57,6 +63,10 @@
           p.age = parseInt(calculateAge(dob));
           p.height = getQuantityValueAndUnit(height[0]);
           p.weight = getQuantityValueAndUnit(weight[0]);
+          p.vitalspanel = getQuantityValueAndUnit(vitalspanel[0]);
+          p.heartrate = getQuantityValueAndUnit(heartrate[0]);
+          p.resprate = getQuantityValueAndUnit(resprate[0]);
+          p.pulseox = getQuantityValueAndUnit(pulseox[0]);
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -89,9 +99,13 @@
       birthdate: {value: ''},
       age: {value: ''},
       height: {value: ''},
-      weight: {value: '1'},
+      weight: {value: ''},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
+      vitalspanel: {value: ''},
+      heartrate: {value: ''},
+      resprate: {value: ''},
+      pulseox: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
     };
