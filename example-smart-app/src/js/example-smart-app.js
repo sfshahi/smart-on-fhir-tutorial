@@ -20,7 +20,7 @@
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
                               'http://loinc.org|3141-9', 'http://loinc.org|85353-1',
                               'http://loinc.org|9279-1', 'http://loinc.org|59408-5',
-                              'http://loinc.org|8867-4',]
+                              'http://loinc.org|8867-4', 'http://loinc.org|8310-5',]
                       }
                     }
                   });
@@ -52,6 +52,7 @@
           var heartrate = byCodes('8867-4');
           var resprate = byCodes('9279-1');
           var pulseox = byCodes('59408-5');
+          var temp = byCodes('8310-5');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
@@ -67,7 +68,8 @@
           p.heartrate = getQuantityValueAndUnit(heartrate[0]);
           p.resprate = getQuantityValueAndUnit(resprate[0]);
           p.pulseox = getQuantityValueAndUnit(pulseox[0]);
-
+          p.temp = getQuantityValueAndUnit(temp[0]);
+          
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
@@ -106,6 +108,7 @@
       heartrate: {value: ''},
       resprate: {value: ''},
       pulseox: {value: ''},
+      temp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
     };
@@ -176,6 +179,7 @@
     $('#heartrate').html(p.heartrate);
     $('#resprate').html(p.resprate);
     $('#pulseox').html(p.pulseox);
+    $('#temp').html(p.temp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
   };
