@@ -21,7 +21,8 @@
                               'http://loinc.org|3141-9', 'http://loinc.org|85353-1',
                               'http://loinc.org|9279-1', 'http://loinc.org|59408-5',
                               'http://loinc.org|8867-4', 'http://loinc.org|8310-5',
-                              'http://loinc.org|9269-2',]
+                              'http://loinc.org|9269-2', 'http://loinc.org|2823-3'
+                              'http://loince.org|24323-8', ]
                       }
                     }
                   });
@@ -55,6 +56,9 @@
           var pulseox = byCodes('59408-5');
           var temp = byCodes('8310-5');
           var gcs = byCodes('9269-2');
+          
+          var sodium = byCodes('24323-8');
+          var potassium = byCodes('2823-3');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
@@ -81,6 +85,8 @@
             p.diastolicbp = diastolicbp;
           }
 
+          p.sodium = getQuantityValueAndUnit(sodium[0]);
+          p.potassium = getQuantityValueAndUnit(potassium[0]);
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
@@ -113,6 +119,8 @@
       pulseox: {value: ''},
       temp: {value: ''},
       gcs: {value: ''},
+      sodium: {value: ''},
+      potassium: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
     };
@@ -185,6 +193,8 @@
     $('#pulseox').html(p.pulseox);
     $('#temp').html(p.temp);
     $('#gcs').html(p.gcs);
+    $('#sodium').html(p.sodium);
+    $('#potassium').html(p.potassium);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
   };
