@@ -55,7 +55,7 @@
           var resprate = byCodes('9279-1');
           var pulseox = byCodes('59408-5');
           var temp = byCodes('8310-5');
-          var gcs = byCodes('9269-2');
+          //var gcs = byCodes('9269-2');
           
           //var sodium = byCodes('24323-8');
           //var potassium = byCodes('2823-3');
@@ -75,7 +75,7 @@
           p.resprate = getQuantityValueAndUnit(resprate[0]);
           p.pulseox = getQuantityValueAndUnit(pulseox[0]);
           p.temp = getQuantityValueAndUnit(temp[0]);
-          p.gcs = getQuantityValueAndUnit(gcs[0]);
+          //p.gcs = getQuantityValueAndUnit(gcs[0]);
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -118,7 +118,7 @@
       resprate: {value: ''},
       pulseox: {value: ''},
       temp: {value: ''},
-      gcs: {value: ''},
+      //gcs: {value: ''},
       //sodium: {value: ''},
       //potassium: {value: ''},
       ldl: {value: ''},
@@ -192,7 +192,7 @@
     $('#resprate').html(p.resprate);
     $('#pulseox').html(p.pulseox);
     $('#temp').html(p.temp);
-    $('#gcs').html(p.gcs);
+    //$('#gcs').html(p.gcs);
     //$('#sodium').html(p.sodium);
     //$('#potassium').html(p.potassium);
     $('#ldl').html(p.ldl);
