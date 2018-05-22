@@ -57,8 +57,8 @@
           var temp = byCodes('8310-5');
           var gcs = byCodes('9269-2');
           
-          var sodium = byCodes('24323-8');
-          var potassium = byCodes('2823-3');
+          //var sodium = byCodes('24323-8');
+          //var potassium = byCodes('2823-3');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
@@ -85,8 +85,8 @@
             p.diastolicbp = diastolicbp;
           }
 
-          p.sodium = getQuantityValueAndUnit(sodium[0]);
-          p.potassium = getQuantityValueAndUnit(potassium[0]);
+          //p.sodium = getQuantityValueAndUnit(sodium[0]);
+          //p.potassium = getQuantityValueAndUnit(potassium[0]);
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
@@ -119,8 +119,8 @@
       pulseox: {value: ''},
       temp: {value: ''},
       gcs: {value: ''},
-      sodium: {value: ''},
-      potassium: {value: ''},
+      //sodium: {value: ''},
+      //potassium: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
     };
@@ -193,8 +193,8 @@
     $('#pulseox').html(p.pulseox);
     $('#temp').html(p.temp);
     $('#gcs').html(p.gcs);
-    $('#sodium').html(p.sodium);
-    $('#potassium').html(p.potassium);
+    //$('#sodium').html(p.sodium);
+    //$('#potassium').html(p.potassium);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
   };
