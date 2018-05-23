@@ -22,6 +22,7 @@
                               'http://loinc.org|9279-1', 'http://loinc.org|59408-5',
                               'http://loinc.org|8867-4', 'http://loinc.org|8310-5', 
                               'http://loinc.org|2951-2', 'http://loinc.org|2823-3', 
+                              
                              ]
                       }
                     }
@@ -170,7 +171,13 @@
         typeof ob.valueQuantity.value != 'undefined' &&
         typeof ob.valueQuantity.unit != 'undefined') {
           return ob.valueQuantity.value + ' ' + ob.valueQuantity.unit;
-    } else {
+    } 
+    elsif (typeof ob != 'undefined' &&
+        typeof ob.valueQuantity != 'undefined' &&
+        typeof ob.valueQuantity.value != 'undefined') {
+          return ob.valueQuantity.value;
+    } 
+    else {
       return undefined;
     }
   }
