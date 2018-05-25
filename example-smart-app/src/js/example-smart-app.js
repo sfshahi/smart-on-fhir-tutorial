@@ -31,6 +31,17 @@
                               'http://loinc.org|2823-3', //potassium
                               'http://loinc.org|2075-0', //chloride
                               'http://loinc.org|2028-9', //CO2
+                              'http://loinc.org|33037-3', //anion gap
+                              'http://loinc.org|2345-7', //glucose
+                              'http://loinc.org|3094-0', //BUN
+                              'http://loinc.org|2160-0', //Creatinine
+                              'http://loinc.org|17861-6', //Calcium
+                              'http://loinc.org|2885-2', //Protein
+                              'http://loinc.org|1751-7', //Albumin
+                              'http://loinc.org|1975-2', //Total bili
+                              'http://loinc.org|6768-6', //Alk P
+                              'http://loinc.org|1742-6', //ALT
+                              'http://loinc.org|1920-8', //AST
                              ]
                       }
                     }
@@ -71,6 +82,17 @@
           var potassium = byCodes('2823-3');
           var chloride = byCodes('2075-0');
           var co2 = byCodes('2028-9');
+          var bun = byCodes('3094-0');
+          var creatinine = byCodes('2160-0');
+          var glucose = byCodes('2345-7');
+          var calcium = byCodes('17861-6');
+          var protein = byCodes('2885-2');
+          var albumin = byCodes('1751-7')
+          var bili = byCodes('1975-2');
+          var alkp = byCodes('6768-6');
+          var alt = byCodes('1742-6');
+          var ast = byCodes('1920-8');
+          var anion = byCodes('33037-3');
           
           //Lipids
           var hdl = byCodes('2085-9');
@@ -104,6 +126,16 @@
           p.potassium = getQuantityValueAndUnit(potassium[0]);
           p.chloride = getQuantityValueAndUnit(chloride[0]);
           p.co2 = getQuantityValueAndUnit(co2[0]);
+          p.bun = getQuantityValueAndUnit(creatinine[0]);
+          p.glucose = getQuantityValueAndUnit(glucose[0]);
+          p.calcium = getQuantityValueAndUnit(calcium[0]);
+          p.protein = getQuantityValueAndUnit(protein[0]);
+          p.albumin = getQuantityValueAndUnit(albumin[0]);
+          p.bili = getQuantityValueAndUnit(bili[0]);
+          p.alkp = getQuantityValueAndUnit(alkp[0]);
+          p.alt = getQuantityValueAndUnit(alt[0]);
+          p.ast = getQuantityValueAndUnit(ast[0]);
+          p.anion = getQuantityValueAndUnit(anion[0]);
           
           //Lipid Panel
           p.hdl = getQuantityValueAndUnit(hdl[0]);
@@ -142,6 +174,16 @@
       potassium: {value: ''},
       chloride: {value: ''},
       co2: {value: ''},
+      bun: {value: ''},
+      glucose: {value: ''},
+      calcium: {value: ''},
+      protein: {value: ''},
+      albumin: {value: ''},
+      bili: {value: ''},
+      alkp: {value: ''},
+      alt: {value: ''},
+      ast: {value: ''},
+      anion: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
     };
@@ -226,6 +268,16 @@
     $('#potassium').html(p.potassium);
     $('#chloride').html(p.chloride);
     $('#co2').html(p.co2);
+    $('#bun').html(p.bun);
+    $('glucose').html(p.glucose);
+    $('calcium').html(p.calcium);
+    $('protein').html(p.protein);
+    $('albumin').html(p.albumin);
+    $('bili').html(p.bili);
+    $('alkp').html(p.alkp);
+    $('alt').html(p.alt);
+    $('ast').html(p.ast);
+    $('anion').html(p.anion);
     
     //Lipid
     $('#ldl').html(p.ldl);
