@@ -192,7 +192,7 @@
         typeof ob.valueQuantity.unit != 'undefined') {
           return ob.valueQuantity.value + ' ' + ob.valueQuantity.unit;
     } 
-    elsif (typeof ob != 'undefined' &&
+    else if (typeof ob != 'undefined' &&
         typeof ob.valueQuantity != 'undefined' &&
         typeof ob.valueQuantity.value != 'undefined') {
           return ob.valueQuantity.value;
