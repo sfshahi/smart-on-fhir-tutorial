@@ -90,10 +90,10 @@
           var co2 = byCodes('2028-9');
           var bun = byCodes('3094-0');
           var creatinine = byCodes('2160-0');
-          var gfr = byCodes('33914-3');
-          var gfr_f = byCodes('50044-7');
-          var gfr_b = byCodes('48643-1');
-          var gfr_nb = byCodes('48643-1');
+          //var gfr = byCodes('33914-3');
+          //var gfr_f = byCodes('50044-7');
+          //var gfr_b = byCodes('48643-1');
+          //var gfr_nb = byCodes('48643-1');
           var glucose = byCodes('2345-7');
           var calcium = byCodes('17861-6');
           var protein = byCodes('2885-2');
@@ -137,10 +137,10 @@
           p.chloride = getQuantityValueAndUnit(chloride[0]);
           p.co2 = getQuantityValueAndUnit(co2[0]);
           p.bun = getQuantityValueAndUnit(creatinine[0]);
-          p.gfr = getQuantityValueAndUnit(gfr[0]);
-          p.gfr_f = getQuantityValueAndUnit(gfr_f[0]);
-          p.gfr_b = getQuantityValueAndUnit(gfr_b[0]);
-          p.gfr_nb = getQuantityValueAndUnit(gfr_nb[0]);
+          //p.gfr = getQuantityValueAndUnit(gfr[0]);
+          //p.gfr_f = getQuantityValueAndUnit(gfr_f[0]);
+          //p.gfr_b = getQuantityValueAndUnit(gfr_b[0]);
+          //p.gfr_nb = getQuantityValueAndUnit(gfr_nb[0]);
           p.glucose = getQuantityValueAndUnit(glucose[0]);
           p.calcium = getQuantityValueAndUnit(calcium[0]);
           p.protein = getQuantityValueAndUnit(protein[0]);
@@ -189,10 +189,10 @@
       chloride: {value: ''},
       co2: {value: ''},
       bun: {value: ''},
-      gfr: {value: ''},
-      gfr_f: {value: ''},
-      gfr_b: {value: ''},
-      gfr_nb: {value: ''},
+      //gfr: {value: ''},
+      //gfr_f: {value: ''},
+      //gfr_b: {value: ''},
+      //gfr_nb: {value: ''},
       glucose: {value: ''},
       calcium: {value: ''},
       protein: {value: ''},
@@ -287,10 +287,10 @@
     $('#chloride').html(p.chloride);
     $('#co2').html(p.co2);
     $('#bun').html(p.bun);
-    $('gfr').html(p.gfr);
-    $('gfr_f').html(p.gfr_f);
-    $('gfr_b').html(p.gfr_b);
-    $('gfr_nb').html(p.gfr_nb);
+    //$('gfr').html(p.gfr);
+    //$('gfr_f').html(p.gfr_f);
+    //$('gfr_b').html(p.gfr_b);
+    //$('gfr_nb').html(p.gfr_nb);
     $('glucose').html(p.glucose);
     $('calcium').html(p.calcium);
     $('protein').html(p.protein);
