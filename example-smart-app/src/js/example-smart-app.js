@@ -45,13 +45,13 @@
                               'http://loinc.org|2744-1', //ABG ph
                               'http://loinc.org|2019-8', //ABG pCO2
                               'http://loinc.org|2703-7', //ABG pO2
-                              //'http://loinc.org|2746-6', //VBG ph
-                              //'http://loinc.org|2021-4', //VBG pCO2
-                              //'http://loinc.org|2705-2', //VBG pO2
-                              //'http://loinc.org|6690-2', //WBC
-                              //'http://loinc.org|718-7', //Hgb
-                              //'http://loinc.org|4544-3', //Hct
-                              //'http://loinc.org|777-3', //Plts
+                              'http://loinc.org|2746-6', //VBG ph
+                              'http://loinc.org|2021-4', //VBG pCO2
+                              'http://loinc.org|2705-2', //VBG pO2
+                              'http://loinc.org|6690-2', //WBC
+                              'http://loinc.org|718-7', //Hgb
+                              'http://loinc.org|4544-3', //Hct
+                              'http://loinc.org|777-3', //Plts
                              ]
                       }
                     }
@@ -114,15 +114,15 @@
           var pO2_abg = byCodes('2703-7');
                                 
           //VBG
-          //var ph_vbg = byCodes('2746-6');
-          //var pCO2_vbg = byCodes('2021-4');
-          //var pO2_vbg = byCodes('2705-2');
+          var ph_vbg = byCodes('2746-6');
+          var pCO2_vbg = byCodes('2021-4');
+          var pO2_vbg = byCodes('2705-2');
           
           //CBC
-          //var wbc = byCodes('6690-2');
-          //var hgb = byCodes('718-7');
-          //var hct = byCodes('4544-3');
-          //var plts = byCodes('777-3');
+          var wbc = byCodes('6690-2');
+          var hgb = byCodes('718-7');
+          var hct = byCodes('4544-3');
+          var plts = byCodes('777-3');
           
           var p = defaultPatient();
           p.birthdate = dobStr;
@@ -173,10 +173,15 @@
           p.pO2_abg = getQuantityValueAndUnit(pO2_abg[0]);
           
           //VBG
-          //p.vbg = getQuantityValueAndUnit(ph_vbg[0]) + ' / ' + getQuantityValueAndUnit(pCO2_vbg[0]) + ' / ' + getQuantityValueAndUnit(pO2_vbg[0]);
+          p.ph_vbg = getQuantityValueAndUnit(ph_vbg[0]);
+          p.pCO2_vbg = getQuantityValueAndUnit(pCO2_vbg[0]);
+          p.pO2_vbg = getQuantityValueAndUnit(pO2_vbg[0]);
           
           //CBC
-          //p.cbc = getQuantityValueAndUnit(wbc[0]) + ' / ' + getQuantityValueAndUnit(hgb[0]) + ' / ' + getQuantityValueAndUnit(hct[0]) + ' / ' getQuantityValueAndUnit(plts[0]);
+          p.wbc = getQuantityValueAndUnit(wbc[0]);
+          p.hbg = getQuantityValueAndUnit(hgb[0]);
+          p.hct = getQuantityValueAndUnit(hct[0]);
+          p.plts = getQuantityValueAndUnit(plts[0]);
           
           ret.resolve(p);
         });
@@ -226,8 +231,13 @@
       ph_abg: {value: ''},
       pCO2_abg: {value: ''},
       pO2_abg: {value: ''},
-      //vbg: {value: ''},
-      //cbc: {value: ''},
+      ph_vbg: {value: ''},
+      pCO2_vbg: {value: ''},
+      pO2_vbg: {value: ''},
+      wbc: {value: ''},
+      hgb: {value: ''},
+      hct: {value: ''},
+      plts: {value: ''},
     };
   }
 
@@ -331,10 +341,15 @@
     $('#pO2_abg').html(p.pO2_abg);
     
     //VBG
-    //$('#vbg').html(p.vbg);
+    $('#ph_vbg').html(p.ph_vbg);
+    $('#pCO2_vbg').html(p.pCO2_vbg);
+    $('#pO2_vbg').html(p.pO2_vbg);
     
     //CBC
-    //$('#cbc').html(p.cbc);
+    $('#wbc').html(p.wbc);
+    $('#hgb').html(p.hgb);
+    $('#hct').html(p.hct);
+    $('#plts').html(p.plts);
   };
 
 })(window);
