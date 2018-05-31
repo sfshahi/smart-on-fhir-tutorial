@@ -42,9 +42,9 @@
                               'http://loinc.org|6768-6', //Alk P
                               'http://loinc.org|1742-6', //ALT
                               'http://loinc.org|1920-8', //AST
-                              //'http://loinc.org|2744-1', //ABG ph
-                              //'http://loinc.org|2019-8', //ABG pCO2
-                              //'http://loinc.org|2703-7', //ABG pO2
+                              'http://loinc.org|2744-1', //ABG ph
+                              'http://loinc.org|2019-8', //ABG pCO2
+                              'http://loinc.org|2703-7', //ABG pO2
                               //'http://loinc.org|2746-6', //VBG ph
                               //'http://loinc.org|2021-4', //VBG pCO2
                               //'http://loinc.org|2705-2', //VBG pO2
@@ -109,9 +109,9 @@
           var ldl = byCodes('2089-1');
 
           //ABG
-          //var ph_abg = byCodes('2744-1');
-          //var pCO2_abg = byCodes('2019-8');
-          //var pO2_abg = byCodes('2703-7');
+          var ph_abg = byCodes('2744-1');
+          var pCO2_abg = byCodes('2019-8');
+          var pO2_abg = byCodes('2703-7');
                                 
           //VBG
           //var ph_vbg = byCodes('2746-6');
@@ -168,7 +168,9 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
           //ABG
-          //p.abg = getQuantityValueAndUnit(ph_abg[0]) + ' / ' + getQuantityValueAndUnit(pCO2_abg[0]) + ' / ' + getQuantityValueAndUnit(pO2_abg[0]);
+          p.ph_abg = getQuantityValueAndUnit(ph_abg[0]);
+          p.pCO2_abg = getQuantityValueAndUnit(pCO2_abg[0]);
+          p.pO2_abg = getQuantityValueAndUnit(pO2_abg[0]);
           
           //VBG
           //p.vbg = getQuantityValueAndUnit(ph_vbg[0]) + ' / ' + getQuantityValueAndUnit(pCO2_vbg[0]) + ' / ' + getQuantityValueAndUnit(pO2_vbg[0]);
@@ -221,7 +223,9 @@
       anion: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      //abg: {value: ''},
+      ph_abg: {value: ''},
+      pCO2_abg: {value: ''},
+      pO2_abg: {value: ''},
       //vbg: {value: ''},
       //cbc: {value: ''},
     };
@@ -322,7 +326,9 @@
     $('#hdl').html(p.hdl);
     
     //ABG
-    //$('#abg').html(p.abg);
+    $('#ph_abg').html(p.ph_abg);
+    $('#pCO2_abg').html(p.pCO2_abg);
+    $('#pO2_abg').html(p.pO2_abg);
     
     //VBG
     //$('#vbg').html(p.vbg);
