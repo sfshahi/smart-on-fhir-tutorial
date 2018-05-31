@@ -174,7 +174,7 @@
           p.vbg = getQuantityValueAndUnit(ph_vbg[0]) + ' / ' + getQuantityValueAndUnit(pCO2_vbg[0]) + ' / ' + getQuantityValueAndUnit(pO2_vbg[0]);
           
           //CBC
-          p.abg = getQuantityValueAndUnit(wbc[0]) + ' / ' + getQuantityValueAndUnit(hgb[0]) + ' / ' + getQuantityValueAndUnit(hct[0]) + ' / ' getQuantityValueAndUnit(plts[0]);
+          p.cbc = getQuantityValueAndUnit(wbc[0]) + ' / ' + getQuantityValueAndUnit(hgb[0]) + ' / ' + getQuantityValueAndUnit(hct[0]) + ' / ' getQuantityValueAndUnit(plts[0]);
           
           ret.resolve(p);
         });
